@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <p>Web Calculator</p>
+      <!-- <button class="history">History</button> -->
+      <div class="display">
+        <div class="history"></div>
+        <span class="text"></span>
+      </div>
+      <div class="keypads">
+        <div id="row1" class="row">
+          <button class="key" id="C">C</button>
+          <button class="key" id="bck-space"><</button>
+        </div>
+        <div class="row">
+          <button class="key num-key op" id="k7" data-value="7">7</button>
+          <button class="key num-key" id="k8" data-value="8">8</button>
+          <button class="key num-key" id="k9" data-value="9">9</button>
+          <button class="key operator" id="slash" data-value="/">/</button>
+          <button class="key operator" id="sqrt" data-value="sqrt">sqrt</button>
+        </div>
+        <div class="row">
+          <button class="key num-key" id="k4" data-value="4">4</button>
+          <button class="key num-key" id="k5" data-value="5">5</button>
+          <button class="key num-key" id="k6" data-value="6">6</button>
+          <button class="key operator" id="mult" data-value="*">*</button>
+          <button class="key operator" id="percent" data-value="%">%</button>
+        </div>
+        <div class="row">
+          <button class="key num-key" id="k1" data-value="1">1</button>
+          <button class="key num-key" id="k2" data-value="2">2</button>
+          <button class="key num-key" id="k3" data-value="3">3</button>
+          <button class="key operator" id="minus" data-value="-">-</button>
+          <div class="equals-container">
+            <button class="key" id="equals" data-value="=">=</button>
+          </div>
+        </div>
+        <div class="row">
+          <button class="key num-key" id="k0" data-value="0">0</button>
+          <button class="key num-key" id="decimal" data-value=".">.</button>
+          <button class="key num-key" id="add-minus" data-value="!">+/-</button>
+          <button class="key operator" id="add" data-value="+">+</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

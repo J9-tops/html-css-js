@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 30px auto;
+  background-color: rgb(206, 200, 200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px black;
+  width: 430px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 3px 3px 5px black;
+}
+
+div > p {
+  font-size: 15pt;
+  font-weight: 500;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
+  background-color: black;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.display {
+  margin-top: 20px;
+  width: 90%;
+  height: 200px;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 7px;
+}
+
+.history {
+  height: 100px;
+  width: 100%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  padding-right: 10px;
+}
+
+.spans {
+  font-size: 35px;
+}
+
+.text {
+  transition: 0.2s;
+  border-top: solid 3px black;
+  height: 100px;
+  width: 100%;
+  text-align: right;
+}
+
+.keypads {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-bottom: 20px;
+}
+
+button {
+  background-color: rgb(206, 200, 200);
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  flex-grow: 0;
+  height: 50px;
+}
+
+.key {
+  border: solid 2px rgb(73, 72, 72);
+  height: 50px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 20pt;
+  font-weight: 600;
+  box-shadow: 5px 3px 5px black;
+}
+
+.key:active {
+  transform: scale(0.85);
+  background-color: rgb(88, 88, 88);
+}
+
+#row1 {
+  justify-content: space-between;
+}
+
+#equals {
+  flex-basis: 38%;
+  height: 110px;
+}

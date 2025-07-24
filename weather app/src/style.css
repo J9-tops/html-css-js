@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --BG-COLOR-1: linear-gradient(to bottom right, #00c6ff, #0072ff);
+  --BG-COLOR-2: #d8f4fc;
+  --BG-COLOR-3: linear-gradient(to top left, #e9e9e9, #ffffff);
+  --ACTION-COLOR: linear-gradient(to top right, #ffaa00, #ffd700);
+  --TEXT-COLOR: #000;
+
+  --BOX-SHADOW: 0 0 10px #00000062;
+  --EASE-TRANSITION: all 0.2s ease;
+  --LINEAR-TRANSITION: all 0.3s linear;
+
+  --WIDTH-1: calc(100% - 2rem);
+  --MAX-WIDTH-1: 30rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: var(--BG-COLOR-1);
+  gap: 1rem;
+  padding: 1rem 0;
+  font-family: "poppins", sans-serif;
+}
+
+form {
+  background-color: var(--BG-COLOR-2);
+  width: var(--WIDTH-1);
+  max-width: var(--MAX-WIDTH-1);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px grey;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+  height: 3rem;
+}
+
+.search-container input {
+  padding: 0.7rem;
+  width: 85%;
+  border: none;
+  box-shadow: 1px 3px 6px grey;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-right: 0.3em;
+  background-image: linear-gradient(to bottom right, white, rgba(128, 128, 128, 0.3));
+}
+
+.search-container button {
+  width: 10%;
+  padding: 0.7rem;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #ffaa00;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-container button img {
+  width: 50%;
+}
+
+.error {
+  margin-top: -0.5rem;
+  margin-bottom: 0.8rem;
+  color: rgba(255, 0, 0, 0.9);
+  font-weight: 700;
+}
+
+.temp-container {
+  display: flex;
+  gap: 10px;
+}
+
+.temp-container label {
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-color: white;
+  border-radius: 50px;
+  padding: 3px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  width: 40px;
+  height: 40px;
+  background-color: #ffaa00;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  pointer-events: none;
+}
+
+.toggle-switch::after {
+  content: "ºC";
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.temp-container label input {
+  display: none;
+}
+
+.temp-container label input:checked ~ .toggle-switch {
+  transform: translateX(50px);
+}
+
+.temp-container label input:checked ~ .toggle-switch::after {
+  content: "ºF";
+  left: 10px;
+}
+
+.loading-container {
+  background-color: var(--BG-COLOR-2);
+  width: var(--WIDTH-1);
+  max-width: var(--MAX-WIDTH-1);
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-container img {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: var(--WIDTH-1);
+  max-width: var(--MAX-WIDTH-1);
+  align-items: center;
+  justify-content: center;
+}
+
+.location-name h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+#time-now {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+#today-date {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.weather-now {
+  background-color: var(--BG-COLOR-2);
+  width: var(--WIDTH-1);
+  max-width: var(--MAX-WIDTH-1);
+  padding: 2rem 2rem;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+#temperature-now {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#temperature-description {
+  font-size: 1.5rem;
+}
+
+.about-weather {
+  width: var(--WIDTH-1);
+  max-width: var(--MAX-WIDTH-1);
+  display: flex;
+  gap: 10px;
+}
+
+.humidity-now,
+.windSpeed-now,
+.highestTemp-now {
+  width: 33%;
+  background-color: var(--BG-COLOR-2);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  box-sizing: var(--BOX-SHADOW);
+  border-radius: 20px;
+}
+
+.humidity-now > p,
+.windSpeed-now > p,
+.highestTemp-now > p {
+  font-weight: 600;
+}
+
+.windSpeed-now > p {
+  width: 130%;
+  text-align: center;
+}
+
+.highestTemp-now > p {
+  text-align: center;
+}
+
+.humidity-now div,
+.windSpeed-now div,
+.highestTemp-now div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.humidity-now div img,
+.windSpeed-now div img,
+.highestTemp-now div img {
+  width: 30px;
+}
+
+.rise-set-container {
+  display: flex;
+  gap: 10px;
+  width: var(--WIDTH-1);
+  max-width: var(--MAX-WIDTH-1);
+}
+
+.sunrise-container,
+.sunset-container {
+  width: 50%;
+  padding: 1.5rem 2.4rem;
+  background-color: var(--BG-COLOR-2);
+  border-radius: 20px;
+}
+
+.sunrise-container h1,
+.sunset-container h1 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.sunrise-container div,
+.sunset-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 0.3rem;
+}
+
+.sunrise-container > div > img,
+.sunset-container > div > img {
+  width: 30px;
+}
+
+.hour-forecast {
+  background-color: var(--BG-COLOR-2);
+  width: var(--WIDTH-1);
+  max-width: var(--MAX-WIDTH-1);
+  border-radius: 20px;
+  padding: 1rem 2.4rem;
+  img {
+    width: 30px;
+  }
+}
+
+.hour-forecast > div {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 0.5rem;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.forecasts {
+  display: flex;
+  overflow: auto;
+  gap: 20px;
+}
+
+.forecasts li {
+  margin-bottom: 1rem;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+.error-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.error-container button {
+  background-color: #ffaa00;
+  border: none;
+  box-shadow: var(--BOX-SHADOW);
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.8);
+  background-color: rgba(255, 170, 0, 0.8);
+  transition: transform 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 700px) {
+  :root {
+    --WIDTH-1: 95%;
+    --MAX-WIDTH-1: 100%;
+  }
+}

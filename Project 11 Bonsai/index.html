@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing - Bonsai Freelance Solution</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="background"></div>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="#"><img src="logo.PNG" alt="bonsai" width="130" /></a>
+        </div>
+
+        <nav class="navbar">
+          <ul>
+            <li>
+              <a href="#">Product <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+              <ul class="dropdown">
+                <li>
+                  <span>Bonsai Workflow</span
+                  ><span>Look professional, win more clients and manage your business from one place</span>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Template <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Reviews</a></li>
+          </ul>
+          <div class="links-for-login">
+            <ul>
+              <li><a href="#">LOG IN</a></li>
+              <li><a href="#">START FREE</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="fas fa-bars"></div>
+      </div>
+    </header>
+    <main>
+      <section class="pricing">
+        <div>
+          <p>Plans & Pricing</p>
+          <div>
+            <p>MONTHLY</p>
+            <label for="toggle">
+              <input type="checkbox" class="toggle-input" id="toggle" />
+              <div class="timing-checkbox"></div>
+            </label>
+            <p id="two-months-free"><span>YEARLY</span><img src="two-months.svg" /></p>
+          </div>
+        </div>
+        <div class="prices">
+          <div class="price-container starter-pack">
+            <div class="text">
+              <p>Starter</p>
+              <p>Ideal for freelancers and contractors just starting out.</p>
+            </div>
+            <div class="price-display-container">
+              <div class="dollar-sign">$</div>
+              <div class="price-display"><span id="price">24</span>/MONTH</div>
+            </div>
+            <div class="benefits">
+              <p><i class="fa fa-check" aria-hidden="true"></i> All Templates</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> Unlimited Clients & Projects</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Invoicing & Payments</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Payments & Contracts</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Task & Time Tracking</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Client CRM</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Expense Tracking</p>
+              <p>
+                <i class="fa fa-check" aria-hidden="true"></i> <span></span>Up to 5 Project Collaborators
+              </p>
+            </div>
+            <a href="#">START FREE</a>
+          </div>
+          <div class="price-container professional-pack">
+            <div class="ribbon"><span>Recommended</span></div>
+            <div class="text">
+              <p>Professional</p>
+              <p>Ideal for freelancers and contractors just starting out.</p>
+            </div>
+            <div class="price-display-container">
+              <div class="dollar-sign">$</div>
+              <div class="price-display"><span id="price">39</span>/MONTH</div>
+            </div>
+            <div class="benefits">
+              <p>
+                <i class="fa fa-check" aria-hidden="true"></i> <span></span>Everything in Starter plus...
+              </p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Custom Branding</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Forms & Questionnaires</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> Workflow Automations</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i><span></span> Client Portal</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>QuickBooks Integration</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Calendly Integration</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i><span></span> Zapier Integration</p>
+              <p>
+                <i class="fa fa-check" aria-hidden="true"></i> <span></span>Up to 15 Project Collaborators
+              </p>
+            </div>
+            <a href="#">START FREE</a>
+          </div>
+          <div class="price-container business-pack">
+            <div class="text">
+              <p>Business</p>
+              <p>The perfect package for small businesses and agencies.</p>
+            </div>
+            <div class="price-display-container">
+              <div class="dollar-sign">$</div>
+              <div class="price-display"><span id="price">79</span>/MONTH</div>
+            </div>
+            <div class="benefits">
+              <p>
+                <i class="fa fa-check" aria-hidden="true"></i> <span></span>Everything in Starter and
+                Professional plus...
+              </p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Subcontractor Management</p>
+              <p>
+                <i class="fa fa-check" aria-hidden="true"></i> <span></span>Hiring Agreement Templates (1099
+                contracts)
+              </p>
+              <p><i class="fa fa-check" aria-hidden="true"></i><span></span> Subcontractor Onboarding</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Talent Pool</p>
+              <p>
+                <i class="fa fa-check" aria-hidden="true"></i> <span></span>3 Team Seats (additional seats
+                $9/month)
+              </p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> <span></span>Accountant Access</p>
+              <p>
+                <i class="fa fa-check" aria-hidden="true"></i> <span></span>Connect Multiple Bank Accounts
+              </p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> Unlimited Subcontractors</p>
+              <p><i class="fa fa-check" aria-hidden="true"></i> Unlimited Project Collaborators</p>
+            </div>
+            <a href="#">START FREE</a>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>Super charge your work with add-ons</h3>
+        <div>
+          <div class="groups collaborators">
+            <div>
+              <p>Collaborators</p>
+              <p>Invite other users to specific projects for limited access and functionality</p>
+            </div>
+            <div id="free">Free</div>
+          </div>
+          <div class="groups partners">
+            <div>
+              <p>Partners</p>
+              <p>Invite other users for full account and company management</p>
+            </div>
+            <div><span>$9</span><span>/MONTH</span></div>
+          </div>
+          <div class="groups collaborators">
+            <div>
+              <p>Bonsai Tax</p>
+              <p>Track expenses, identify write-offs, and estimate quarterly taxes easily</p>
+            </div>
+            <div><span>$10</span><span>/MONTH</span></div>
+          </div>
+        </div>
+      </section>
+      <section id="our-motivation">
+        <p>It's <span>your</span> business. We're here to help it grow.</p>
+        <a href="#">START FREE</a>
+      </section>
+      <section class="faq">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-container">
+          <div class="question question-1">
+            <p class="separate-text faq-q">
+              <span>How does free trial work?</span> <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </p>
+            <p class="answer">
+              When you start your trial with Bonsai you'll receive full, unlimited access to all of Bonsai's
+              Workflow or Workflow Plus Features! You will need to enter your credit card information to
+              begin your trial, but don't worry - we won't charge you anything until the subscription ends!
+              If you wish to cancel at any time during the trial period, you can do so through your
+              Subscriptions Settings Page.
+            </p>
+          </div>
+          <div class="question question-2">
+            <p class="separate-text faq-q">
+              <span>Can I change plans anytime?</span> <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </p>
+            <p class="answer">
+              Yes, you can from within your account. If you have already subscribed to a plan, or want to
+              downgrade or upgrade your current one, you can do this by going to your "Settings" and
+              "Subscription".
+            </p>
+          </div>
+          <div class="question question-3">
+            <p class="separate-text faq-q">
+              How do I pause my Bonsai subscription? <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </p>
+            <p class="answer">
+              We totally understand that with the nature of freelancing, work ebbs and flows so you might
+              not always need your Bonsai subscription to remain active! The good news is that you can
+              cancel or pause your monthly subscription at any time without penalty. Once cancelled, you'll
+              be able to continue logging in to access all your documents and even continue to use our free
+              features, like Time Tracking! In order to cancel your subscription, login to your Bonsai
+              account.
+            </p>
+          </div>
+          <div class="question question-4">
+            <p class="separate-text faq-q">
+              <span>What is your refund policy?</span> <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </p>
+            <p class="answer">
+              If you contact us within 2 weeks of being charged for your subscription, we will be happy to
+              issue a refund for you!Beyond those 2 weeks, you will need to cancel or modify the
+              subscription from the Subscriptions Tab in Settings to avoid future charges, but refunds will
+              not be issued. This applies to both monthly and annual plans.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="category product">
+          <h3>PRODUCT</h3>
+          <div class="offers">
+            <a href="#">Proposals</a>
+            <a href="#">Contracts</a>
+            <a href="#">Invoicing</a>
+            <a href="#">Client CRM</a>
+            <a href="#">Time Tracking</a>
+            <a href="#">Task Tracking</a>
+            <a href="#">Forms</a>
+            <a href="#">Accounting</a>
+            <a href="#">Bonsai Tax</a>
+            <a href="#">Bonsai Cash</a>
+            <a href="#">Pricing</a>
+            <a href="#">Bonsai Reviews</a>
+          </div>
+        </div>
+        <div class="category free-resources">
+          <h3>FREE RESOURCES</h3>
+          <div class="offers">
+            <a href="#">Freelance Resources</a>
+            <a href="#">Freelance Blog by Bonsai</a>
+            <a href="#">How to Write a Contract</a>
+            <a href="#">Online Signature Maker</a>
+
+            <a href="#">Self-Employed Taxes Hub</a>
+            <a href="#">Self-Employed Tax Calculator</a>
+            <a href="#">Self-Employed Deductions </a>
+            <p>Templates</p>
+            <a href="#" class="separate-text"
+              >Invoice Templates <i class="fa fa-chevron-down" aria-hidden="true"></i
+            ></a>
+            <a href="#" class="separate-text"
+              >Proposal Templates <i class="fa fa-chevron-down" aria-hidden="true"></i
+            ></a>
+            <a href="#" class="separate-text"
+              >Contract Templates <i class="fa fa-chevron-down" aria-hidden="true"></i
+            ></a>
+            <a href="#" class="separate-text"
+              >Agreement Templates <i class="fa fa-chevron-down" aria-hidden="true"></i
+            ></a>
+            <a href="#" class="separate-text"
+              >Scope of Work Templates <i class="fa fa-chevron-down" aria-hidden="true"></i
+            ></a>
+            <a href="#" class="separate-text"
+              >Quote Templates <i class="fa fa-chevron-down" aria-hidden="true"></i
+            ></a>
+            <a href="#">Credit Note Templates</a>
+            <a href="#">Estimate Templates</a>
+            <a href="#">Form Templates</a>
+          </div>
+        </div>
+        <div class="category bonsai">
+          <h3>BONSAI</h3>
+          <div class="offers">
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Support</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Privacy policy</a>
+            <a href="#">Legal</a>
+            <a href="#">Affiliates</a>
+            <a href="#">Write for Us</a>
+            <a href="#">Bonsai Cash</a>
+            <a href="#" class="separate-text"
+              >Comparisons <i class="fa fa-chevron-down" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

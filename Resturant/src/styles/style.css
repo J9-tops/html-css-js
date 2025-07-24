@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gold-crayon;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.webkit--extend {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0% 16.66%,
+    #121111 33.33% 50%,
+    transparent 66.66% 75%
+  );
+  background-size: 500%;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #141515;
+}
+body {
+  @apply bg-smoky-black-2;
+}
+.menuBtnClass {
+  @apply w-[30px] h-[2px] bg-white mt-1 mb-1 origin-left animate-menuBtn;
+}
+
+.delay-150 {
+  @apply animation-delay-150;
+}
+.delay-300 {
+  @apply animation-delay-300;
+}
+
+.hover-underline {
+  position: relative;
+  max-width: max-content;
+}
+
+.hover-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  border-block: 1px solid #e4c590;
+  transform: scaleX(0.2);
+  opacity: 0;
+  transition: 500ms ease;
+}
+
+.hover-underline:is(:hover, :focus-visible)::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.separator::after {
+  content: url("../assets/images/separator.svg");
+  display: block;
+  width: 100px;
+  margin-inline: auto;
+  margin-top: 1.2rem;
+}
+
+.img-holder {
+  aspect-ratio: var(--width) / var(--height);
+  overflow: hidden;
+  background-color: var(--eerie-black-4);
+}

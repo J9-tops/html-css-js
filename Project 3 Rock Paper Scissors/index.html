@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+    <div class="choices-available">
+      <button class="rock">
+        <img src="images/rock-emoji.png" alt="rock-choice" id="rock" />
+      </button>
+      <button class="paper">
+        <img src="images/paper-emoji.png" alt="paper-choice" id="paper" />
+      </button>
+      <button class="scissors">
+        <img src="images/scissors-emoji.png" alt="scissors-choice" id="scissors" />
+      </button>
+    </div>
+    <div class="result">
+      <p></p>
+    </div>
+    <div class="choices-chosen">
+      <div class="user-choice">
+        <p>You</p>
+        <img id="user-choice-image" />
+      </div>
+      <div class="computer-choice">
+        <p>Computer</p>
+        <img id="computer-choice-image" />
+      </div>
+    </div>
+    <div class="scores">
+      <div class="wins">
+        <p>Wins:</p>
+        <p class="number-of-wins"></p>
+      </div>
+      <div class="losses">
+        <p>Losses:</p>
+        <p class="number-of-losses"></p>
+      </div>
+      <div class="ties">
+        <p>Ties:</p>
+        <p class="number-of-ties"></p>
+      </div>
+    </div>
+    <button class="reset-score-button">Reset Score</button>
+  </body>
+</html>

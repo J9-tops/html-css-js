@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Etch a Sketch</h1>
+    <p>just hover over the sketch to etch after sliding</p>
+    <div class="container">
+      <p id="text">Choose your painting mode</p>
+      <div class="buttons">
+        <div class="choices">
+          <button id="solid-fill">Solid Fill</button>
+          <button id="blend">Blend</button>
+          <button id="eraser">Erase</button>
+        </div>
+        <div class="other-choices">
+          <button class="turn-grid-on-off">Grid off/on</button>
+          <button class="refresh-canvas">Refresh Canvas</button>
+        </div>
+      </div>
+      <div class="blend">
+        <input type="color" name="color-input1" id="color-input1" title="pick-color" />
+        <p id="arrow">--></p>
+        <input type="color" name="color-input2" id="color-input2" title="pick-color" value="#e66465" />
+      </div>
+      <div class="adjuster">
+        <p class="text">Adjust the cells in canvas</p>
+        <input
+          type="range"
+          name="cell-number-adjuster"
+          id="adjust-cell-numbers"
+          title="Cell Number Adjuster"
+          min="2"
+          max="40"
+          value="2"
+          step="2"
+        />
+      </div>
+    </div>
+    <div class="sketchboard"></div>
+    <div class="counter"></div>
+  </body>
+</html>
